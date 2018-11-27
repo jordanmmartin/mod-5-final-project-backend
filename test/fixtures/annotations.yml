@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  photo_id: 1
+  name: MyString
+  url: MyString
+  category: MyString
+  brand: MyString
+  shade: MyString
+
+two:
+  photo_id: 1
+  name: MyString
+  url: MyString
+  category: MyString
+  brand: MyString
+  shade: MyString
