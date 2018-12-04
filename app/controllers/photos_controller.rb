@@ -11,15 +11,15 @@ class PhotosController < ApplicationController
 
   # GET /photos/1
   def show
-    render json: @photo
+    render json: {photo: PhotoSerializer.new(@photo), user: UserSerializer.new(@photo.user)}
   end
 
   # POST /photos
   def create
-    @photo = Photo.new(photo_params)
+    @photo = Photo.create(photo_params)
 
-    if @photo.save
-      render json: @photo, status: :created, location: @photo
+    if @photo.valid?
+      render json: @photo, status: :created
     else
       render json: @photo.errors, status: :unprocessable_entity
     end
