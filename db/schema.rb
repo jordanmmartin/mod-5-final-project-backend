@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_26_154016) do
+ActiveRecord::Schema.define(version: 2018_12_05_195306) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,21 @@ ActiveRecord::Schema.define(version: 2018_11_26_154016) do
     t.string "category"
     t.string "brand"
     t.string "shade"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "comment"
+  end
+
+  create_table "follows", force: :cascade do |t|
+    t.integer "following_id"
+    t.integer "follower_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "photo_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
