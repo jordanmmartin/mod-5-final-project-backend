@@ -23,9 +23,9 @@ Follow.create(following_id: jordan.id, follower_id: james.id)
 
 
 photo = Photo.create(user: jordan, caption: 'Glossier Phase 1 Set',url: 'https://static-assets.glossier.com/production/spree/images/attachments/000/001/754/portrait_normal/P1S_01-compressor.jpg?1514903538')
-annotation1 = Annotation.create(photo: photo, name: 'Milky Jelly Cleanser', category: 'Skincare', brand: 'Glossier', shade: '', url: 'https://www.glossier.com/products/milky-jelly-cleanser')
-annotation2 = Annotation.create(photo: photo, name: 'Priming Moisturizer', category: 'Skincare', brand: 'Glossier', shade: '', url: 'https://www.glossier.com/products/priming-moisturizer')
-annotation3 = Annotation.create(photo: photo, name: 'Balm Dotcom', category: 'Skincare', brand: 'Glossier', shade: '', url: 'https://www.glossier.com/products/balm-dotcom')
+annotation1 = Annotation.create(photo: photo, name: 'Milky Jelly Cleanser', category: 'Skincare', brand: 'Glossier', shade: 'clear', url: 'https://www.glossier.com/products/milky-jelly-cleanser', comment: 'This removes all my mascara and eye makeup!' )
+annotation2 = Annotation.create(photo: photo, name: 'Priming Moisturizer', category: 'Skincare', brand: 'Glossier', shade: 'clear', url: 'https://www.glossier.com/products/priming-moisturizer', comment: 'Very moisturizing and foundation lays so smooth on top.')
+annotation3 = Annotation.create(photo: photo, name: 'Balm Dotcom', category: 'Skincare', brand: 'Glossier', shade: 'clear', url: 'https://www.glossier.com/products/balm-dotcom', comment:'Best lip balm ever!!!')
 
 Like.create(photo: photo, user_id: estee.id)
 Like.create(photo: photo, user_id: james.id)
