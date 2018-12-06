@@ -17,6 +17,11 @@ class PhotosController < ApplicationController
   # POST /photos
   def create
     @photo = Photo.create(photo_params)
+    # @annotations = params["photo"]["annotations"]
+    # @annotations.each do |annotation|
+    #   Annotation.create(annotation)
+    # end
+
 
     if @photo.valid?
       render json: @photo, status: :created
